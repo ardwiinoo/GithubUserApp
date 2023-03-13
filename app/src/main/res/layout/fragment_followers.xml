@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MainActivity">
+    tools:context=".view.FollowersFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvUsers"
+        android:id="@+id/rvFollower"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:overScrollMode="ifContentScrolls"
@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progressBarFollower"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"

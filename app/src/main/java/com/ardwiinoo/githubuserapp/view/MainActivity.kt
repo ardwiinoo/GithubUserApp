@@ -72,11 +72,11 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-    private fun showRecyclerView(list: List<User?>?): UserListAdapter {
+    private fun showRecyclerView(list: List<User>?): UserListAdapter {
         val userList = ArrayList<User>()
 
         list?.let {
-            userList.addAll(it.filterNotNull())
+            userList.addAll(it)
         }
 
         return UserListAdapter(userList)

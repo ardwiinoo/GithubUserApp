@@ -18,7 +18,6 @@ import com.google.android.material.tabs.TabLayoutMediator
 class DetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailBinding
-    private val sectionsPagerAdapter = SectionsPagerAdapter(this)
     private val detailViewModel by viewModels<DetailViewModel>()
 
     companion object {
@@ -54,6 +53,8 @@ class DetailActivity : AppCompatActivity() {
         supportActionBar?.title = username
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        // send username to adapter
+        val sectionsPagerAdapter = SectionsPagerAdapter(this, username)
         val viewPager: ViewPager2 = binding.viewPager
         viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = binding.tabs

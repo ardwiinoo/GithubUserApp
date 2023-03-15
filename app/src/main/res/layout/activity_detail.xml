@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.DetailUserActivity">
+    style="@style/SCREEN"
+    tools:context=".view.DetailActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imgProfileUser"
@@ -22,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="Nama Lengkap"
+        style="@style/TEXT"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -35,6 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="Username"
+        style="@style/TEXT"
         android:textAlignment="center"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -48,6 +51,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="40dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
         android:paddingRight="40dp"
         app:layout_constraintTop_toBottomOf="@+id/tvUsername"
         tools:ignore="MissingConstraints">
@@ -57,12 +62,16 @@
             <TextView
                 android:id="@+id/tvUserFollowersNumber"
                 android:padding="8dp"
+                android:textSize="16sp"
                 android:text="100"
+                style="@style/TEXT"
                 android:textStyle="bold" />
 
             <TextView
                 android:padding="8dp"
                 android:text="Followers"
+                android:textSize="16sp"
+                style="@style/TEXT"
                 android:textStyle="italic" />
 
             <Space
@@ -73,11 +82,15 @@
                 android:id="@+id/tvUserFollowingsNumber"
                 android:padding="8dp"
                 android:text="100"
+                style="@style/TEXT"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:padding="8dp"
                 android:text="Followings"
+                android:textSize="16sp"
+                style="@style/TEXT"
                 android:textStyle="italic" />
 
         </TableRow>
@@ -88,10 +101,12 @@
         android:id="@+id/progressBarDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.193" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
@@ -100,11 +115,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        android:backgroundTint="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout"
         app:layout_constraintVertical_bias="0.0"
-        app:tabTextColor="@color/white" />
+        style="@style/TABS" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"

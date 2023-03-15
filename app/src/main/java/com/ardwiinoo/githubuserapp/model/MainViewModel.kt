@@ -1,7 +1,6 @@
 package com.ardwiinoo.githubuserapp.model
 
 import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -16,7 +15,7 @@ class MainViewModel : ViewModel() {
 
     companion object {
         private const val TAG = "MainViewModel"
-        private const val USERNAME = "ardwiinoo"
+        private const val USERNAME = "arif"
     }
 
     private val _listUser = MutableLiveData<List<User>>()

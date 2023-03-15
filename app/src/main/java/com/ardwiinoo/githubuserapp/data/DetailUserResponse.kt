@@ -1,7 +1,6 @@
 package com.ardwiinoo.githubuserapp.data
 
 import com.google.gson.annotations.SerializedName
-
 data class DetailUserResponse (
     @SerializedName("login")
     val login: String?,

@@ -1,7 +1,6 @@
 package com.ardwiinoo.githubuserapp.data
 
 import com.google.gson.annotations.SerializedName
-
 data class GithubResponse (
     @SerializedName("total_count")
     val totalCount: Int?,

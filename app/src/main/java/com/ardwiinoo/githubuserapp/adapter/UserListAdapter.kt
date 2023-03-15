@@ -15,20 +15,20 @@ class UserListAdapter(private val listUser: List<User>) : RecyclerView.Adapter<U
     class ViewHolder(var binding: ItemUserRowBinding) :RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding =ItemUserRowBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemUserRowBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val users =listUser[position]
+        val users = listUser[position]
 
         holder.apply {
             binding.apply {
-                tvItemUsername.text =users.login
+                tvUserUsername.text =users.login
                 Glide.with(itemView.context)
                     .load(users.avatarUrl)
                     .error(R.drawable.baseline_person_24)
-                    .into(ivItemAvatar)
+                    .into(imgUserAvatar)
 
                 // intent
                 itemView.setOnClickListener {

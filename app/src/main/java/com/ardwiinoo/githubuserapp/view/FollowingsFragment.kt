@@ -68,7 +68,7 @@ class FollowingsFragment : Fragment() {
             listUsers.addAll(it)
         }
 
-        return UserListAdapter((listUsers))
+        return UserListAdapter(listUsers)
     }
 
     private fun showLoading(isLoading: Boolean) {
